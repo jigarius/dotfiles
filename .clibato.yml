@@ -1,0 +1,22 @@
+contents:
+  Scripts/aliases.sh:
+  Scripts/functions.sh:
+  Scripts/user.sh:
+  .bash_profile:
+  .bashrc:
+  .clibato.yml:
+  .gitconfig:
+  .gitexcludes:
+  .hushlogin:
+  .p10k.zsh:
+  .vimrc:
+  .zshrc:
+
+destination:
+  type: "repository"
+  path: "~/.clibato"
+  remote: "git@github.com:jigarius/dotfiles.git"
+  branch: "main"
+  user_name: "Jigar Mehta"
+  user_mail: "r2d2@jigarius.com"
+

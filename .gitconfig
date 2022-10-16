@@ -1,0 +1,32 @@
+[user]
+	name = Jigar Mehta
+	email = r2d2@jigarius.com
+	signingkey = 37018446F7470B93
+[core]
+	fileMode = false
+	excludesfile = "~/.gitexcludes"
+	eol = lf
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[alias]
+	co = checkout
+	st = status
+	lo = log --oneline
+	ds = diff --staged
+	cp = cherry-pick
+	ca = commit --amend
+	bc = branch --show-current
+	pt = push -u origin HEAD
+	pf = push --force
+	fp = fetch --prune
+	praise = blame
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[advice]
+	skippedCherryPicks = false
+[gpg]
+	program = gpg
