@@ -22,8 +22,8 @@
 	pf = push --force
 	fp = fetch --prune
 	praise = blame
-        ba = !git branch | cat
-        tc = !git commit -m Temporary -n
+	ba = !git branch | cat
+	tc = !git commit -m Temporary -n
 [pull]
 	ff = only
 [init]
