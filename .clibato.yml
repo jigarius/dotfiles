@@ -1,4 +1,5 @@
 contents:
+  .ddev/commands/host/arm:
   Scripts/aliases.sh:
   Scripts/functions.sh:
   Scripts/user.sh:

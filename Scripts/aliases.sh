@@ -10,6 +10,7 @@ alias gpgkeys="gpg --list-secret-keys --keyid-format=long"
 
 alias dd="ddev"
 alias ddr="ddev drush"
+alias ddc="ddev composer"
 alias ddx="ddev exec"
 alias ddx0="ddev xdebug off"
 alias ddx1="ddev xdebug on"

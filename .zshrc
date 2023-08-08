@@ -17,7 +17,24 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+ZSH_THEME_RANDOM_CANDIDATES=(
+  edvardm
+  bira
+  rixius
+  emotty
+  amuse
+  duellj
+  fishy
+  af-magic
+  linuxonly
+  nanotech
+  refined
+  half-life
+  steef
+  sorin
+  dst
+  blinks
+)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -72,6 +89,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  chruby
   emoji
   emotty
   gpg-agent
@@ -122,6 +140,11 @@ export DRUD_DEBUG=1
 source ~/Scripts/aliases.sh
 source ~/Scripts/functions.sh
 source ~/Scripts/user.sh
+
+# Chruby.
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3
 
 # Go-up.
 source ~/Code/gup/gup.sh

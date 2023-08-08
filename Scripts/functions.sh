@@ -3,6 +3,12 @@
 
 # Stop all docker containers.
 dsac() {
+  cids=$(docker ps -q)
+  if [ -z "$cids" ]; then
+    echo "No containers are running. Aborting."
+    return
+  fi
+
   docker stop $(docker ps -q) > /dev/null
 }
 
@@ -31,16 +37,23 @@ please() {
   until eval "$@"; do echo -n "Retrying"; dots 3; done
 }
 
-# Start a ddev project.
-darm() {
-  please ddev start;
-  dots 3;
-  ddev auth ssh;
-}
-
 # Remove Git branches where the remote branch is gone.
 gdrg() {
-  git fetch --all --prune;
+  git fetch origin --prune;
   git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D;
+}
+
+# Updates the target branch based on the main branch.
+#
+# The base branch is first updated by pulling all changes from remote.
+#
+# Usage: grb (rebase on main)
+# Usage: grb foo (rebase on foo)
+grbs() {
+  base=${1:-main}
+  git checkout "$base"
+  git pull origin "$base"
+  git checkout -
+  git rebase "$base"
 }
 

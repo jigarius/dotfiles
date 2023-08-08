@@ -17,11 +17,14 @@
 	ds = diff --staged
 	cp = cherry-pick
 	ca = commit --amend
+  can = commit --amend --no-edit
 	bc = branch --show-current
 	pt = push -u origin HEAD
 	pf = push --force
 	fp = fetch --prune
 	praise = blame
+	sl = stash list
+	sp = stash pop
 	ba = !git branch | cat
 	tc = !git commit -m Temporary -n
 [pull]

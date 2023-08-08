@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+## Description: Start and prepare for local development.
+## Example: ddev arm
+
+set -e
+
+ddev start
+ddev auth ssh
+say "D dev started" || echo "\a"
+
