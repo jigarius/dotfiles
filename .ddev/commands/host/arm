@@ -7,5 +7,9 @@ set -e
 
 ddev start
 ddev auth ssh
+
+echo -e "\n\nOne-time login URL:"
+ddev drush uli
+
 say "D dev started" || echo "\a"
 

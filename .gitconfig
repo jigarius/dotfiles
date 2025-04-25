@@ -1,5 +1,5 @@
 [user]
-	name = Jigar Mehta
+	name = Jerry Radwick
 	email = r2d2@jigarius.com
 	signingkey = 37018446F7470B93
 [core]
@@ -8,6 +8,7 @@
 	eol = lf
 [push]
 	default = simple
+	autoSetupRemote = true
 [commit]
 	gpgsign = true
 [alias]
@@ -17,7 +18,7 @@
 	ds = diff --staged
 	cp = cherry-pick
 	ca = commit --amend
-  can = commit --amend --no-edit
+	can = commit --amend --no-edit
 	bc = branch --show-current
 	pt = push -u origin HEAD
 	pf = push --force

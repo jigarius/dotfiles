@@ -11,7 +11,7 @@ export ZSH="/Users/jigarius/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -21,19 +21,12 @@ ZSH_THEME_RANDOM_CANDIDATES=(
   edvardm
   bira
   rixius
-  emotty
   amuse
-  duellj
   fishy
   af-magic
-  linuxonly
   nanotech
-  refined
-  half-life
-  steef
   sorin
   dst
-  blinks
 )
 
 # Uncomment the following line to use case-sensitive completion.
@@ -89,10 +82,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  chruby
   emoji
   emotty
   gpg-agent
+  node
+  npm
+  nvm
   ssh-agent
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -157,3 +152,7 @@ bindkey '^[[1;9D' backward-word
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Lando
+export PATH="/Users/jigarius/.lando/bin${PATH+:$PATH}"; #landopath
+

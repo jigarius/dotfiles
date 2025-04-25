@@ -1,6 +1,11 @@
 # Functions
 # ======
 
+# Drush launcher
+function drush () {
+  $(git rev-parse --show-toplevel)/vendor/bin/drush "$@"
+}
+
 # Stop all docker containers.
 dsac() {
   cids=$(docker ps -q)
@@ -51,9 +56,14 @@ gdrg() {
 # Usage: grb foo (rebase on foo)
 grbs() {
   base=${1:-main}
-  git checkout "$base"
-  git pull origin "$base"
-  git checkout -
-  git rebase "$base"
+  git checkout "$base" \
+  && git pull origin "$base" \
+  && git checkout - \
+  && git rebase "$base"
+}
+
+# Alternative syntax for pwd.
+whereami() {
+  pwd
 }
 
